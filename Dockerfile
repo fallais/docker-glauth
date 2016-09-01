@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine:latest
 MAINTAINER François ALLAIS <francois.allais@hotmail.com>
 
 RUN apk add --update git \
