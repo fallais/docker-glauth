@@ -9,6 +9,8 @@ RUN apk add --update git \
     && cp glauth/bin/glauth64 ./ \
     && rm -Rf glauth/
 
+WORKDIR /app
+
 EXPOSE     389
 VOLUME     [ "/data" ]
 CMD        [ "/app/glauth64", "-c", "/data/glauth.cfg" ]
