@@ -1,7 +1,7 @@
 FROM        frolvlad/alpine-glibc:latest
 MAINTAINER  François ALLAIS <francois.allais@hotmail.com>
 
-RUN apt-get -y install git
+RUN apk add git
 
 RUN mkdir /data && \
     cd /data && \
