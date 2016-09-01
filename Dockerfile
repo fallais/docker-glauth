@@ -6,7 +6,7 @@ RUN apk add --update git \
     && mkdir /app \
     && cd /app \
     && git clone https://github.com/nmcclain/glauth \
-    && cp glauth/bin/glauth64 ./glauth64 \
+    && cp /app/glauth/bin/glauth64 /app/glauth64 \
     && rm -Rf glauth/
 
 EXPOSE     389
