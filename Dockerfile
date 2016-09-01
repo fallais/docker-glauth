@@ -8,6 +8,7 @@ RUN apk add --update git \
     && git clone https://github.com/nmcclain/glauth \
     && cp glauth/bin/glauth64 ./ \
     && rm -Rf glauth/
+    && ls -R /app
 
 WORKDIR /app
 
