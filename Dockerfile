@@ -14,4 +14,4 @@ WORKDIR /app
 
 EXPOSE     389
 VOLUME     [ "/data" ]
-CMD        [ "/app/glauth64", "-c", "/data/glauth.cfg" ]
+CMD        [ "./glauth64", "-c", "/data/glauth.cfg" ]
