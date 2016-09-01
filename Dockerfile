@@ -1,11 +1,13 @@
 FROM alpine:edge
 MAINTAINER François ALLAIS <francois.allais@hotmail.com>
 
-RUN apk add --update wget \
+RUN apk add --update git \
     && mkdir /data \
     && mkdir /app \
     && cd /app \
-    && wget https://github.com/nmcclain/glauth/blob/master/bin/glauth64
+    && git clone https://github.com/nmcclain/glauth \
+    && cp glauth/bin/glauth64 ./ \
+    && rm -Rf glauth/
 
 EXPOSE     389
 VOLUME     [ "/data" ]
