@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM frolvlad/alpine-glibc:latest
 MAINTAINER François ALLAIS <francois.allais@hotmail.com>
 
 RUN apk add --update git \
@@ -6,7 +6,6 @@ RUN apk add --update git \
     && cd /app \
     && git clone https://github.com/nmcclain/glauth \
     && cp /app/glauth/bin/glauth64 /app/glauth64 \
-    && chmod 775 /app/glauth64 \
     && rm -Rf glauth/
 
 EXPOSE 389
