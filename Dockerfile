@@ -8,4 +8,4 @@ RUN apk add --update git \
 
 EXPOSE     389
 VOLUME     [ "/data" ]
-CMD        [ "/data/glauth/glauth32", "-c", "/data/glauth.cfg" ]
+CMD        [ "/data/glauth/bin/glauth64", "-c", "/data/glauth.cfg" ]
